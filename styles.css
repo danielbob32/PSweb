@@ -59,7 +59,7 @@ section {
 h1, h2 {
     font-size: 24px;
     font-weight: bold;
-    color: #fff;
+    color: #2a2a2a;
 }
 
 h2 {
@@ -128,3 +128,88 @@ footer {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+/* Apply this CSS only to elements within the .home-setup class to avoid affecting other pages */
+.home-setup {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Ensuring font consistency */
+    color: #333; /* Text color consistent with the index page */
+    background-color: #f4f4f4; /* Background color matching the index page */
+}
+
+.home-setup header {
+    background-color: #333; /* Header background */
+    color: white; /* Header text color */
+}
+
+.home-setup nav ul li a {
+    background-color: transparent; /* No distinct background on links unless hovered */
+    color: white;
+}
+
+.home-setup nav ul li a:hover {
+    color: #ffcc00; /* Hover effect color */
+}
+
+.home-setup section {
+    background-color: white; /* Section background for content clarity */
+    padding: 40px 20px; /* Ample padding for readability */
+    margin: 20px 0; /* Space between sections */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+.home-setup code {
+    background-color: #eaeaea; /* Ensuring code blocks are readable */
+    padding: 10px; /* Padding around code for space */
+}
+
+.home-setup footer {
+    background-color: #333; /* Footer consistency with header */
+    color: white;
+}
+
+/* Responsive adjustments specific to the Home Setup page */
+@media (max-width: 768px) {
+    .home-setup .container {
+        padding: 10px; /* Adjust padding on smaller screens */
+    }
+
+    .home-setup nav ul li {
+        display: block; /* Stack navigation links vertically on mobile */
+    }
+}
+.home-setup {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro-section, .setup-steps {
+    margin: 20px auto;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.setup-steps h3 {
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.setup-steps ol li {
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+footer {
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    margin-top: 30px;
+}
