@@ -21,7 +21,7 @@ body {
 }
 #videoSnapshot {
     display: block;         /* Ensures the image is treated as a block-level element */
-    width: 10%;             /* Maintains the width as 20% of its container */
+    width: 50%;             /* Maintains the width as 20% of its container */
     height: auto;           /* Keeps the aspect ratio of the image */
     border-radius: 5px;     /* Rounded corners for aesthetics */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
