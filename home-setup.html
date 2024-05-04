@@ -13,9 +13,7 @@
             <h1>Parking Management System</h1>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="how-tos.html">How To's</a></li>
-                    <li><a href="developers.html">Developers</a></li>
+                    <li><a href="index.html">Return To Home Page</a></li>
                 </ul>
             </nav>
         </div>
@@ -23,27 +21,49 @@
 
     <section class="home-setup">
         <div class="container">
-            <h2>Home Setup Guide</h2>
-            <p>This guide will walk you through the steps needed to set up your Parking Management System at home. Here, you'll learn about the necessary equipment, software installation, and initial configuration settings.</p>
+            <h2>Home Setup Guide: Pre-Processing Stages</h2>
+            <p>This section of the guide details the pre-processing steps required to configure your Parking Management System using visual data from cameras.</p>
 
-            <h3>Equipment Needed</h3>
-            <ul>
-                <li>High-resolution cameras</li>
-                <li>PC with adequate specifications</li>
-                <li>Reliable internet connection</li>
-            </ul>
+            <h3>1. Snapshot Capture from Video</h3>
+            <p>Capturing snapshots from video files at defined intervals is crucial for analyzing parking availability. Here's how it's done:</p>
+            <code>
+                # Create the output folder if it doesn't exist<br>
+                os.makedirs(output_folder, exist_ok=True)<br>
+                <br>
+                # Iterate over each video in the input folder and its subfolder<br>
+                for root, dirs, files in os.walk(input_folder):<br>
+                    for i, video_file in enumerate(files):<br>
+                        ...<br>
+            </code>
+            <img src="Assets/snip.png" alt="Snapshots from Video">
 
-            <h3>Installation Steps</h3>
-            <ol>
-                <li>Mount the cameras at strategic locations.</li>
-                <li>Install the necessary software on your PC.</li>
-                <li>Connect the cameras to your PC via your network.</li>
-                <li>Configure the software to recognize the cameras.</li>
-                <li>Test the system to ensure it works properly.</li>
-            </ol>
+            <h3>2. Segmentation</h3>
+            <p>Using YOLO or similar models to segment the parking areas from the snapshots:</p>
+            <code>
+                model = YOLO('yolov8s-seg.pt')<br>
+                ...<br>
+            </code>
+            <img src="Assets/seg.png" alt="Segmented Images">
 
-            <h3>Configuration Tips</h3>
-            <p>Make sure to adjust the camera angles to cover the maximum area of your parking space. Adjust settings for optimal video quality depending on your hardware and environmental conditions.</p>
+            <h3>3. Mask Outputs</h3>
+            <p>Creating HSV masks to identify relevant features in the parking area images:</p>
+            <code>
+                # Define the color range for the orange masks in the HSV color space<br>
+                hsv_lower_range = np.array([5, 100, 100], dtype=np.uint8)<br>
+                ...<br>
+            </code>
+            <img src="Assets/mask.png" alt="Mask Outputs">
+
+            <h3>4. Probability Map</h3>
+            <p>Developing probability maps from the processed images to predict parking space availability:</p>
+            <code>
+                # Initialize an empty array to accumulate the probabilities<br>
+                accumulator = None<br>
+                ...<br>
+            </code>
+            <img src="Assets/probability_map.png" alt="Probability Map">
+
+            <p>These steps provide the necessary data and insights for the system to effectively manage and monitor parking spaces.</p>
         </div>
     </section>
 

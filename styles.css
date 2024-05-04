@@ -5,33 +5,32 @@
     box-sizing: border-box;
 }
 
-/* Global Styles */
+/* General body styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern, clean font */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4; /* Light grey background for better contrast */
-    color: #333; /* Dark grey text for readability */
+    background-color: #f4f4f4;
+    color: #333;
 }
 
+/* Container for centering the layout */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
+/* Header styles */
 header {
     background-color: #333;
     color: #fff;
     padding: 20px 0;
-}
-
-header h1 {
-    font-size: 24px;
-    font-weight: bold;
+    text-align: center;
 }
 
 nav ul {
     list-style-type: none;
+    padding: 0;
 }
 
 nav ul li {
@@ -42,6 +41,7 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    padding: 5px 10px;
     transition: color 0.3s ease;
 }
 
@@ -49,30 +49,68 @@ nav ul li a:hover {
     color: #ffcc00;
 }
 
+/* Section styling */
 section {
     padding: 40px 0;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+h1, h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
 }
 
 h2 {
-    font-size: 32px;
     margin-bottom: 20px;
+    font-size: 32px;
 }
 
 p {
     font-size: 16px;
 }
 
-/* Hero Section */
-.hero {
-    background-image: url('hero-background.jpg');
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    color: #fff;
-    padding: 100px 0;
+/* Code block styling */
+code {
+    display: block;
+    background-color: #eee;
+    padding: 15px;
+    margin: 10px 0;
+    overflow: auto;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-family: 'Courier New', monospace;
 }
 
-/* How To's Section - Cards */
+/* Image styling for visual content */
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Hover effects for icons */
+.icon {
+    transition: transform 300ms ease, filter 300ms ease;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Responsive card-like sections */
 .how-to-card, .dev-card {
     display: block;
     background-color: #fff;
@@ -90,58 +128,3 @@ p {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.how-to-card i, .dev-card i {
-    font-size: 48px;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
-
-/* Specific styles for training and other internal pages */
-.training-system h2, .other-sections h2 {
-    font-size: 36px; /* Slightly larger for emphasis on training pages */
-    color: #333;
-}
-
-.training-system p, .other-sections p {
-    font-size: 18px; /* Slightly larger font size for readability on training pages */
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.section {
-    opacity: 0;
-    animation: fadeIn 1s ease-out forwards;
-    animation-delay: 0.3s;
-}
-
-/* Trigger animations when elements come into view */
-.section:in-viewport {
-    animation-play-state: running;
-}
-
-
-.icon {
-    transition: transform 300ms ease, filter 300ms ease;
-}
-
-.icon:hover {
-    transform: scale(1.1);
-    filter: brightness(1.2);
-}
