@@ -3,11 +3,11 @@
       height: 83vh;
       margin-bottom: 6rem;
     }
-    .about-containers {
+    .How-to-Setup-Locally-containers {
       flex-wrap: wrap;
     }
-    #contact,
-    #projects {
+    #Effective-Regions,
+    #Training-the-System{
       height: fit-content;
     }
   }
@@ -19,8 +19,8 @@
     #hamburger-nav {
       display: flex;
     }
-    #experience,
-    .experience-details-container {
+    #Create-Data-Set,
+    .Create-Data-Set-details-container {
       margin-top: 2rem;
     }
     #profile,
@@ -42,13 +42,13 @@
       height: 275px;
       margin: 0 auto 2rem;
     }
-    .about-containers {
+    .How-to-Setup-Locally-containers {
       margin-top: 0;
     }
   }
   
   @media screen and (max-width: 600px) {
-    #contact,
+    #Effective-Regions,
     footer {
       height: 40vh;
     }
@@ -63,19 +63,19 @@
       height: fit-content;
       margin-bottom: 2rem;
     }
-    .about-containers,
-    .contact-info-upper-container,
+    .How-to-Setup-Locally-containers,
+    .Effective-Regions-info-upper-container,
     .btn-container {
       flex-wrap: wrap;
     }
-    .contact-info-container {
+    .Effective-Regions-info-container {
       margin: 0;
     }
-    .contact-info-container p,
+    .Effective-Regions-info-container p,
     .nav-links li a {
       font-size: 1rem;
     }
-    .experience-sub-title {
+    .Create-Data-Set-sub-title {
       font-size: 1.25rem;
     }
     .logo {
@@ -86,6 +86,8 @@
       gap: 0.5rem;
       text-align: center;
     }
+  
+
     .section__pic-container {
       width: auto;
       height: 46vw;

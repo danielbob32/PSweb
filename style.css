@@ -77,6 +77,48 @@ a:hover {
   display: inline-block;
 }
 
+
+
+
+/* reset changes og hamnurger menu */
+.hamburger-menu {
+    width: auto; /* Adjust based on content */
+    padding: 10px; /* Adds padding inside the menu */
+}
+
+.menu-links a {
+    font-size: 1.2rem; /* Smaller font size for more text */
+    padding: 8px 12px; /* Adjust padding to give more space around the links */
+}
+
+.menu-links {
+    transition: max-height 0.3s ease-in-out; /* Smooth transition for expanding and collapsing */
+    max-height: 0; /* Start with collapsed menu */
+    overflow: hidden; /* Keeps extra content hidden */
+    width: 100%; /* Takes full width */
+    background-color: #fff; /* Ensures the menu is readable */
+}
+
+.hamburger-icon.open + .menu-links {
+    max-height: 500px; /* Adjust based on content size */
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column; /* Stacks links vertically on smaller screens */
+        align-items: center; /* Centers links */
+    }
+}
+
+
+/* reset changes og hamnurger menu */
+
+
+
+
+
+
+
 .hamburger-icon {
   display: flex;
   flex-direction: column;
@@ -156,12 +198,8 @@ section {
   min-height: fit-content;
 }
 
-.section-container {
+.section-container{
     display: flex;
-    align-items: center; /* Aligns items vertically in the center */
-    justify-content: center; /* Center items horizontally */
-    gap: 20px; /* Adds space between the image and text */
-    padding: 20px; /* Adds padding around the content for spacing */
 }
 
 /* PROFILE SECTION */
@@ -173,9 +211,22 @@ section {
   height: 80vh;
 }
 
-.section__pic-container,
-.section__text {
-    flex: 1; /* Allows both the image and text container to take up equal space */
+.profile-pic {
+    border-radius: 10rem;
+    width: 100%;
+    display: flex;    
+  }
+
+.section_pic-container {
+    display: flex;
+    height: 400px; 
+    width: 400px;
+    margin: auto 0;
+}
+
+.section_text{
+    align-self: center;
+    text-align: center;
 }
 
 .section__text p {
@@ -258,35 +309,32 @@ section {
   gap: 1rem;
 }
 
-@media (max-width: px) {
-    .section-container {
-        flex-direction: column; /* Stacks the image and text vertically on small screens */
-    }
-}
-/* ABOUT SECTION */
 
-#about {
+/* How-to-Setup-Locally SECTION */
+
+#How-to-Setup-Locally {
   position: relative;
 }
 
-.about-containers {
+.How-to-Setup-Locally-containers {
   gap: 2rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
 }
 
-.about-details-container {
+.How-to-Setup-Locally-details-container {
   justify-content: center;
   flex-direction: column;
 }
 
-.about-containers,
-.about-details-container {
+.How-to-Setup-Locally-containers,
+.How-to-Setup-Locally-details-container {
   display: flex;
 }
 
-.about-pic {
+.How-to-Setup-Locally-pic {
   border-radius: 2rem;
+    width: 100%;
 }
 
 .arrow {
@@ -312,24 +360,24 @@ section {
 
 .section__pic-container {
   height: 400px;
-  width: 400px;
+  width: 1400px;
   margin: auto 0;
 }
 
-/* EXPERIENCE SECTION */
+/* Create-Data-Set SECTION */
 
-#experience {
+#Create-Data-Set {
   position: relative;
 }
 
-.experience-sub-title {
+.Create-Data-Set-sub-title {
   color: rgb(85, 85, 85);
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
 }
 
-.experience-details-container {
+.Create-Data-Set-details-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -355,9 +403,9 @@ article .icon {
   cursor: default;
 }
 
-/* PROJECTS SECTION */
+/* Training-the-System SECTION */
 
-#projects {
+#Training-the-System {
   position: relative;
 }
 
@@ -382,16 +430,16 @@ article .icon {
   border-color: rgb(163, 163, 163);
 }
 
-/* CONTACT */
+/* Effective-Regions */
 
-#contact {
+#Effective-Regions {
   display: flex;
   justify-content: center;
   flex-direction: column;
   height: 70vh;
 }
 
-.contact-info-upper-container {
+.Effective-Regions-info-upper-container {
   display: flex;
   justify-content: center;
   border-radius: 2rem;
@@ -402,7 +450,7 @@ article .icon {
   padding: 0.5rem;
 }
 
-.contact-info-container {
+.Effective-Regions-info-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -410,11 +458,11 @@ article .icon {
   margin: 1rem;
 }
 
-.contact-info-container p {
+.Effective-Regions-info-container p {
   font-size: larger;
 }
 
-.contact-icon {
+.Effective-Regions-icon {
   cursor: default;
 }
 
