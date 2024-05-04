@@ -1,0 +1,27 @@
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide desktop menu */
+    }
+
+    #hamburger-nav {
+        display: block; /* Show hamburger menu */
+    }
+
+    .section-container, #profile {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .section_pic-container, .section__pic-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .nav-links li {
+        font-size: 1.2rem; /* Adjust font size for mobile */
+    }
+
+    .btn {
+        width: 100%; /* Full width buttons on mobile */
+    }
+}
