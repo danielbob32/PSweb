@@ -19,6 +19,17 @@ body {
     margin: 0 auto;
     padding: 20px;
 }
+#videoSnapshot {
+    display: block;         /* Ensures the image is treated as a block-level element */
+    width: 40%;             /* Maintains the width as 20% of its container */
+    height: auto;           /* Keeps the aspect ratio of the image */
+    border-radius: 5px;     /* Rounded corners for aesthetics */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    margin-top: 20px;       /* Top margin for spacing */
+    margin-left: auto;      /* Auto margin for horizontal centering */
+    margin-right: auto;     /* Auto margin for horizontal centering */
+}
+
 
 /* Header styles */
 header {
@@ -55,8 +66,13 @@ section {
     animation: fadeIn 1s ease-out forwards;
     animation-delay: 0.3s;
 }
-
-h1, h2 {
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+}
+ h2 {
     font-size: 24px;
     font-weight: bold;
     color: #2a2a2a;
