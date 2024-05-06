@@ -411,6 +411,11 @@ section {
   margin: 40px;
 }
 
+.title_1 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
 .back-to-top {
   left: 1rem;
   bottom: 1rem;
@@ -423,37 +428,83 @@ section {
 
 #Create-Data-Set {
   position: relative;
-  padding: 20px;
-  border-radius: 10px;
-  margin: 20px auto;
-  width: 80%; /* Adjusted to better fit different screen sizes */
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
-.create-dataset-image {
-  width: 100%;
-  border-radius: 55px; 
+.title_2 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+
+.dataset-image img {
+  width: 50%;
+  border-radius: 55px;
   box-shadow: 0px 4px 6px rgba(0,0,0,0.12);
   margin: 10px;
 }
 
-.create-dataset-image img {
+.dataset-image {
   width: 100%;
-  height: auto;
-}
-
-.create-dataset-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 20px 0;
 }
 
-.create-dataset-details {
-  width: 100%;
+.dataset-text {
+  margin: 20px 0;
+  text-align: center;
+}
+
+
+.dataset-container{
   display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
+  justify-content: space-evenly; 
+  align-items: center; 
+  text-align: center;
+  flex-wrap: wrap; 
+  gap: 20px; 
+}
+
+.dataset-btn{
+  width: 300px;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5px;
+  background: rgb(216, 255, 232);
+  border-radius: 2rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.12);
+  margin: 10px;
+  text-decoration: none; 
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.dataset-btn:hover {
+  box-shadow: 0px 8px 15px rgba(0,0,0,0.2); 
+  transform: translateY(-5px); 
+}
+
+.dataset-link {
+  text-decoration: none; 
+  color: inherit; 
+  display: block; 
+  transition: color 0.3s ease; 
+}
+
+.dataset-link:hover {
+  color: #555;
+  text-decoration: none;
+}
+
+.dataset-container h2 {
+  margin: 0;
+  font-size: 16px; 
+  color: #333; 
+}
+
+.dataset-container a, .dataset-container a:hover {
+  text-decoration: none; 
+  color: inherit; 
 }
 
 .back-to-top {
@@ -469,90 +520,73 @@ section {
 /* Training-the-System SECTION */
 
 #Training-the-System {
-  position: relative;
   padding: 20px;
-  border-radius: 10px;
-  margin: 20px auto;
-  width: 80%; /* Adjusted to better fit different screen sizes */
   text-align: center;
+}
+
+.title_3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.training-images-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px 0;
 }
 
-.training-the-system-image {
-  width: 100%;
-  border-radius: 55px; 
-  box-shadow: 0px 4px 6px rgba(0,0,0,0.12);
-  margin: 10px;
-}
-
-.training-the-system-image img {
-  width: 100%;
+.training-image img {
+  width: 300px; /* Adjust based on your needs */
   height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
 }
 
-.training-the-system-text {
-  margin: 20px 0;
+.right-arrow {
+  height: 50px; /* Adjust based on your arrow image size */
 }
 
-.training-the-system-details {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
+.training-btn-container {
+  margin-top: 20px;
 }
+
+.training-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.training-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
 .back-to-top {
   left: 1rem;
   bottom: 1rem;
   position: absolute;
 }
 
-
-
-/* Effective-Regions */
+/* EFFECTIVE REGIONS SECTION */
 
 #Effective-Regions {
-  position: relative;
   padding: 20px;
-  border-radius: 10px;
-  margin: 20px auto;
-  width: 80%; /* Adjusted to better fit different screen sizes */
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
-
-.effective-regions-image {
-  width: 100%;
-  border-radius: 55px; 
-  box-shadow: 0px 4px 6px rgba(0,0,0,0.12);
-  margin: 10px;
-}
-
-.effective-regions-image img {
-  width: 100%;
-  height: auto;
-}
-
-
-.effective-regions-text {
-  margin: 20px 0;
-}
-
-.effective-regions-details {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-
-}
 .back-to-top {
   left: 1rem;
   bottom: 1rem;
   position: absolute;
 }
-
 
 /* FOOTER SECTION */
 
