@@ -1,231 +1,161 @@
-/* Reset CSS */
+/* General Styles and Typography */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* General body styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
     background-color: #f4f4f4;
     color: #333;
-}
-
-/* Container for centering the layout */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-#videoSnapshot {
-    display: block;         /* Ensures the image is treated as a block-level element */
-    width: 50%;             /* Maintains the width as 20% of its container */
-    height: auto;           /* Keeps the aspect ratio of the image */
-    border-radius: 5px;     /* Rounded corners for aesthetics */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
-    margin-top: 20px;       /* Top margin for spacing */
-    margin-left: auto;      /* Auto margin for horizontal centering */
-    margin-right: auto;     /* Auto margin for horizontal centering */
-}
-
-
-/* Header styles */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 5px 10px;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #ffcc00;
-}
-
-/* Section styling */
-section {
-    padding: 40px 0;
-    animation: fadeIn 1s ease-out forwards;
-    animation-delay: 0.3s;
-}
-h1 {
-    font-size: 36px;
-    font-weight: bold;
-    color: #fff;
-    margin-bottom: 20px;
-}
- h2 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #2a2a2a;
-}
-
-h2 {
-    margin-bottom: 20px;
-    font-size: 32px;
+    scroll-behavior: smooth;
 }
 
 p {
-    font-size: 16px;
+    color: rgb(85, 85, 85);
 }
 
-/* Code block styling */
-code {
-    display: block;
-    background-color: #eee;
-    padding: 15px;
-    margin: 10px 0;
-    overflow: auto;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    font-family: 'Courier New', monospace;
-}
-
-/* Image styling for visual content */
-img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    margin-top: 20px;
-}
-
-/* Footer styling */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
-
-/* Hover effects for icons */
-.icon {
-    transition: transform 300ms ease, filter 300ms ease;
-}
-
-.icon:hover {
-    transform: scale(1.1);
-    filter: brightness(1.2);
-}
-
-/* Responsive card-like sections */
-.how-to-card, .dev-card {
-    display: block;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    margin-bottom: 20px;
-    color: #333;
+a, .btn {
+    color: black;
     text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 300ms ease;
 }
 
-.how-to-card:hover, .dev-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+a:hover {
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
 }
 
-/* Apply this CSS only to elements within the .home-setup class to avoid affecting other pages */
-.home-setup {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Ensuring font consistency */
-    color: #333; /* Text color consistent with the index page */
-    background-color: #f4f4f4; /* Background color matching the index page */
-}
-
-.home-setup header {
-    background-color: #333; /* Header background */
-    color: white; /* Header text color */
-}
-
-.home-setup nav ul li a {
-    background-color: transparent; /* No distinct background on links unless hovered */
-    color: white;
-}
-
-.home-setup nav ul li a:hover {
-    color: #ffcc00; /* Hover effect color */
-}
-
-.home-setup section {
-    background-color: white; /* Section background for content clarity */
-    padding: 40px 20px; /* Ample padding for readability */
-    margin: 20px 0; /* Space between sections */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
-}
-
-.home-setup code {
-    background-color: #eaeaea; /* Ensuring code blocks are readable */
-    padding: 10px; /* Padding around code for space */
-}
-
-.home-setup footer {
-    background-color: #333; /* Footer consistency with header */
-    color: white;
-}
-
-/* Responsive adjustments specific to the Home Setup page */
-@media (max-width: 768px) {
-    .home-setup .container {
-        padding: 10px; /* Adjust padding on smaller screens */
-    }
-
-    .home-setup nav ul li {
-        display: block; /* Stack navigation links vertically on mobile */
-    }
-}
-.home-setup {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-}
-
-.header-content {
+/* Navigation and Menus */
+nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    height: 17vh;
 }
 
-.intro-section, .setup-steps {
-    margin: 20px auto;
-    padding: 30px;
-    background: #fff;
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+.logo {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Hamburger Menu - Mobile View */
+#hamburger-nav {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #hamburger-nav {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+    display: block;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-links {
+    position: absolute;
+    background-color: white;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.menu-links.open {
+    max-height: 300px; /* Expandable on click */
+}
+
+/* Profile Section */
+#profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    padding: 4vh;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: auto;
+}
+
+/* Sections General Layout */
+section {
+    padding: 4vh 10vw;
+    min-height: fit-content;
+}
+
+.section-container {
+    display: flex;
+    gap: 4rem;
+}
+
+/* Details Containers */
+.details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: rgb(213, 234, 253);
+    border-radius: 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    transition: all 0.3s ease;
 }
 
-.setup-steps h3 {
-    color: #444;
-    margin-bottom: 15px;
+.details-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-.setup-steps ol li {
-    margin-bottom: 10px;
-    line-height: 1.4;
+/* Buttons and Icons */
+.btn {
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+    border: 1px solid #333;
+    background: none;
+    cursor: pointer;
 }
 
+.btn:hover {
+    background: #333;
+    color: white;
+}
+
+.icon {
+    height: 2rem;
+    cursor: pointer;
+}
+
+/* Footer */
 footer {
     padding: 20px 0;
-    background-color: #333;
-    color: #fff;
     text-align: center;
-    margin-top: 30px;
+    background-color: #333;
+    color: white;
 }

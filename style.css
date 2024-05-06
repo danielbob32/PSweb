@@ -211,12 +211,12 @@ section {
   justify-content: center;
   align-items: center;
   gap: 5rem;
-  height: 80vh;
 }
 
 .profile-pic {
-    border-radius: 10rem;
-    width: 100%;
+    border-radius: 7.5rem;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.12);
+    width: 70%;
     display: flex;    
   }
 
@@ -242,7 +242,8 @@ section {
 }
 
 .section__text__p2 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
+  text-align: center;
   margin-bottom: 1rem;
 }
 
@@ -310,24 +311,11 @@ section {
   border: rgb(255, 255, 255) 0.1rem solid;
 }
 
-.btn-container {
-  gap: 1rem;
-}
-
-#profile {
-  margin-bottom: 40rem;
-}
-
-#How-to-Setup-Locally {
-  margin-bottom: 20rem;
-}
-
 
 /* How-to-Setup-Locally SECTION */
 
 #How-to-Setup-Locally {
   position: relative;
-  height: 70vh;
 }
 
 .How-to-Setup-Locally-containers {
@@ -347,29 +335,22 @@ section {
 .How-to-Setup-Locally-containers,
 .How-to-Setup-Locally-details-container {
   display: flex;
+  align-items: center;
 }
 
 .How-to-Setup-Locally-pic {
   border-radius: 2rem;
-    width: 100%;
-}
-
-
-
-.section-container {
-  gap: 4rem;
-  height: 80%;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.12);
+  margin: 10px;
 }
 
 
 .details-container {
-  display: flex;
-  flex-direction: column;
   width: 300px;
   justify-content: space-evenly;
   align-items: center;
-  padding: 20px;
-  background: rgb(213, 234, 253);
+  padding: 5px;
+  background: rgb(216, 255, 232);
   border-radius: 2rem;
   box-shadow: 0px 4px 6px rgba(0,0,0,0.12);
   margin: 10px;
@@ -395,11 +376,10 @@ section {
 }
 
 .icon {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   margin-bottom: 10px; 
 }
-
 
 .details-container h2 {
   margin: 0;
@@ -407,29 +387,37 @@ section {
   color: #333; 
 }
 
-
 .details-container a, .details-container a:hover {
   text-decoration: none; 
   color: inherit; 
 }
 
 .section__pic-container {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
-  height: 300px;
-
+  height: 400px;
+  width: 800px;
+  margin: 20px;
 }
-  
-
-#Create-Data-Set {
-  margin-bottom: 20rem;
+ 
+.text-container {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 40px;
 }
+
+.arrow {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+
 
 /* Create-Data-Set SECTION */
 
 #Create-Data-Set {
   position: relative;
-  height: 100vh;
   padding: 20px;
   border-radius: 10px;
   margin: 20px auto;
@@ -474,7 +462,6 @@ section {
 
 #Training-the-System  {
   position: relative;
-  height: 100vh;
   padding: 20px;
   border-radius: 10px;
   margin: 20px auto;
@@ -554,9 +541,6 @@ section {
   cursor: default;
 }
 
-.email-icon {
-  height: 2.5rem;
-}
 
 /* FOOTER SECTION */
 
@@ -570,46 +554,8 @@ footer p {
 }
 
 
-/* Adjust image size */
-.section__pic-container img,
-.How-to-Setup-Locally-pic,
-.data-set-pic,
-.project-img {
-  width: 100%;
-  height: auto;
-}
 
-/* Adjust size of data set section image */
-#Create-Data-Set .create-dataset-image img {
-  max-width: 100%; /* Ensure image doesn't overflow its container */
-  height: auto; /* Maintain aspect ratio */
-}
-/* Ensure the image container doesn't overflow */
-.section__pic-container {
-  overflow: hidden;
-  max-width: 100%;
-}
 
-/* Ensure the section container doesn't overflow */
-.section-container {
-  overflow: hidden;
-  max-width: 100%;
-  position: relative;
-}
 
-/* Adjust margins and paddings */
-section {
-  padding: 4vh 10vw; /* Adjust as needed */
-}
 
-/* Adjust margins of section text */
-.section__text {
-  margin-top: 2rem; /* Adjust as needed */
-}
-
-#profile .arrow {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-}
 

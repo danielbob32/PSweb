@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Space</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Parking Space</div>
+        <ul class="nav-links">
+            <li><a href="#How-to-Setup-Locally">How to Setup Locally</a></li>
+            <li><a href="#Create-Data-Set">Create Data Set</a></li>
+            <li><a href="#Training-the-System">Training the System</a></li>
+            <li><a href="#Effective-Regions">Effective Regions</a></li>
+        </ul>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Parking Space</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu-links">
+                <li><a href="#How-to-Setup-Locally" onclick="toggleMenu()">How to Setup Locally</a></li>
+                <li><a href="#Create-Data-Set" onclick="toggleMenu()">Create Data Set</a></li>
+                <li><a href="#Training-the-System" onclick="toggleMenu()">Training the System</a></li>
+                <li><a href="#Effective-Regions" onclick="toggleMenu()">Effective Regions</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="profile">
+        <div class="section-container">
+            <img src="Assets/index.gif" alt="Parking Space profile picture" class="profile-pic">
+            <div class="section__text">
+                <p class="section__text__p1">Welcome To</p>
+                <h1 class="title">Parking Space</h1>
+                <p class="section__text__p2">Parking Space Detection System</p>
+                <div class="btn-container">
+                    <button class="btn btn-color-2" onclick="location.href='https://github.com/danielbob32/ParkingSpace'">GitHub Repository</button>
+                    <button class="btn btn-color-1" onclick="location.href='https://drive.google.com/drive/folders/1QcF1jjBGosJ222jYxhZ8896LLwEcX5bQ?usp=sharing'">Data Sets</button>
+                </div>
+                <div id="socials-container">
+                    <img src="Assets/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://www.linkedin.com/in/danielbobritski/'">
+                    <img src="Assets/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/danielbob32'">
+                </div>
+            </div>
+        </div>
+        <img src="Assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#How-to-Setup-Locally'">
+    </section>
+
+    <section id="How-to-Setup-Locally">
+        <div class="section-container">
+            <div class="section__pic-container">
+                <img src="Assets/localy.png" alt="Profile picture" class="How-to-Setup-Locally-pic">
+            </div>
+            <div class="How-to-Setup-Locally-details-container">
+                <div class="How-to-Setup-Locally-containers">
+                    <a href="setup-hardware.html" class="details-link">
+                        <div class="details-container">
+                            <img src="Assets/microchip-icon.png" alt="microchip icon" class="icon">
+                            <h2>Hardware</h2>
+                            <p>Learn how to setup the system</p>
+                        </div>
+                    </a>
+                    <a href="home-setup.html" class="details-link">
+                        <div class="details-container">
+                            <img src="Assets/software.png" alt="software icon" class="icon">
+                            <h2>Software</h2>
+                            <p>Learn how to adjust the program for your area</p>
+                        </div>
+                    </a>
+                    <div class="text-container">
+                        <p>
+                            In this section, you will learn how to setup the system locally. Starting from setting up the camera and the required network, to adjusting the program for your area. Note that to reach the best results, you will also have to train the system with your own data set and learn how to choose the most effective regions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <img src="Assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#Create-Data-Set'">
+        </div>
+    </section>
+
+    <section id="Create-Data-Set">
+        <p class="section__text__p1">Learn How To</p>
+        <h1 class="title">Create a Data Set</h1>
+        <div class="create-dataset-container section-container">
+          <div class="create-dataset-text text-container">
+            <p>In this section, you will learn how to create your own data set. You can start by exploring our original data sets or follow our detailed guide to create one tailored to your specific needs.</p>
+          </div>
+          <div class="create-dataset-image">
+            <img src="Assets/dataset.png" alt="Data Set Illustration" class="data-set-pic">
+          </div>
+          <div class="create-dataset-details details-container">
+            <img src="Assets/google-drive-color-icon.png" alt="Google Drive icon" class="dataset-icon icon">
+            <h2>Our Data Set</h2>
+            <p>Here you can find a link to the original data set</p>
+          </div>
+          <div class="create-dataset-details details-container">
+            <img src="Assets/cctv-icon.png" alt="CCTV icon" class="dataset-icon icon">
+            <h2>Make your own</h2>
+            <p>Here you can find a walkthrough on how to create your own data set</p>
+          </div>
+        </div>
+        <img src="Assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#Training-the-System'">
+      </section>
+      
+      <section id="Training-the-System">
+        <p class="section__text__p1">Learn How To</p>
+        <h1 class="title">Train the System</h1>
+        <div class="create-dataset-container section-container">
+          <div class="create-dataset-text text-container">
+            <p>In this section, you will learn how to train the system. Proper training is crucial to ensure accuracy and efficiency.</p>
+          </div>
+          <div class="create-dataset-image">
+            <img src="Assets/training.png" alt="Training System Illustration" class="data-set-pic">
+          </div>
+          <div class="create-dataset-details details-container">
+            <img src="Assets/algorithm-icon.png" alt="Algorithm icon" class="dataset-icon icon">
+            <h2>Algorithm Training</h2>
+            <p>Learn the steps to train the detection algorithm</p>
+          </div>
+        </div>
+        <img src="Assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#Effective-Regions'">
+      </section>
+      
+      <section id="Effective-Regions">
+        <p class="section__text__p1">Learn How To</p>
+        <h1 class="title">Choose Effective Regions</h1>
+        <div class="create-dataset-container section-container">
+          <div class="create-dataset-text text-container">
+            <p>In this section, discover how to select the most effective regions for setting up your system to maximize performance and accuracy.</p>
+          </div>
+          <div class="create-dataset-image">
+            <img src="Assets/regions.png" alt="Effective Regions Illustration" class="data-set-pic">
+          </div>
+          <div class="create-dataset-details details-container">
+            <img src="Assets/map-pin-icon.png" alt="Map Pin icon" class="dataset-icon icon">
+            <h2>Region Selection</h2>
+            <p>Guidance on choosing the best locations for your cameras</p>
+          </div>
+        </div>
+        <a href="#top" class="back-to-top">Back to Top</a>
+      </section>
+
+    <footer>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#How-to-Setup-Locally">How to Setup Locally</a></li>
+                <li><a href="#Create-Data-Set">Create Data Set</a></li>
+                <li><a href="#Training-the-System">Training the System</a></li>
+                <li><a href="#Effective-Regions">Effective Regions</a></li>
+            </ul>
+        </nav>
+        <p>Copyright &#169; 2024 Parking Space. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
