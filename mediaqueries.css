@@ -86,7 +86,7 @@
       gap: 0.5rem;
       text-align: center;
     }
-  
+    
 
     .section__pic-container {
       width: auto;
@@ -104,3 +104,13 @@
     }
   }
   
+
+  @media screen and (max-width: 768px) {
+    #Create-Data-Set .create-dataset-image {
+        width: 80%; /* Larger image on smaller screens for better visibility */
+    }
+    
+    #Create-Data-Set {
+        width: 90%; /* Slightly increase width on smaller screens */
+    }
+  }
