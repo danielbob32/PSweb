@@ -190,6 +190,11 @@ a:hover {
   transform: none;
 }
 
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+}
 /* SECTIONS */
 
 section {
@@ -210,7 +215,6 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5rem;
 }
 
 .profile-pic {
@@ -251,6 +255,7 @@ section {
   font-size: 3rem;
   text-align: center;
 }
+
 
 #socials-container {
   display: flex;
@@ -341,7 +346,7 @@ section {
 .How-to-Setup-Locally-pic {
   border-radius: 2rem;
   box-shadow: 0px 4px 6px rgba(0,0,0,0.12);
-  margin: 10px;
+  margin: 50px;
 }
 
 
@@ -406,10 +411,10 @@ section {
   margin: 40px;
 }
 
-.arrow {
+.back-to-top {
+  left: 1rem;
+  bottom: 1rem;
   position: absolute;
-  right: 10px;
-  bottom: 10px;
 }
 
 
@@ -451,6 +456,11 @@ section {
   margin-top: 20px;
 }
 
+.back-to-top {
+  left: 1rem;
+  bottom: 1rem;
+  position: absolute;
+}
 
 
 
@@ -458,9 +468,7 @@ section {
 
 /* Training-the-System SECTION */
 
-
-
-#Training-the-System  {
+#Training-the-System {
   position: relative;
   padding: 20px;
   border-radius: 10px;
@@ -472,73 +480,77 @@ section {
   align-items: center;
 }
 
-#Training-the-System .training-system-container {
+.training-the-system-image {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#Training-the-System .training-system-text {
-  order: 1; /* Ensures text is on top */
-  margin-bottom: 20px; /* Adds spacing between text and image */
-}
-
-#Training-the-System .training-system-image {
-  order: 2; /* Image comes after text */
-  width: 60%; /* Adjust image width here */
-  margin: 20px 0;
-}
-
-#Training-the-System .project-img {
-  width: 80%;
   border-radius: 55px; 
   box-shadow: 0px 4px 6px rgba(0,0,0,0.12);
   margin: 10px;
 }
 
-#Training-the-System .training-system-details {
-  order: 3; /* Details come last */
+.training-the-system-image img {
+  width: 100%;
+  height: auto;
+}
+
+.training-the-system-text {
+  margin: 20px 0;
+}
+
+.training-the-system-details {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  margin-top: 20px;
 }
+.back-to-top {
+  left: 1rem;
+  bottom: 1rem;
+  position: absolute;
+}
+
+
 
 /* Effective-Regions */
 
 #Effective-Regions {
+  position: relative;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  width: 80%; /* Adjusted to better fit different screen sizes */
+  text-align: center;
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  height: 70vh;
-}
-
-.Effective-Regions-info-upper-container {
-  display: flex;
-  justify-content: center;
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
-  margin: 2rem auto;
-  padding: 0.5rem;
-}
-
-.Effective-Regions-info-container {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin: 1rem;
 }
 
-.Effective-Regions-info-container p {
-  font-size: larger;
+
+.effective-regions-image {
+  width: 100%;
+  border-radius: 55px; 
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.12);
+  margin: 10px;
 }
 
-.Effective-Regions-icon {
-  cursor: default;
+.effective-regions-image img {
+  width: 100%;
+  height: auto;
+}
+
+
+.effective-regions-text {
+  margin: 20px 0;
+}
+
+.effective-regions-details {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+
+}
+.back-to-top {
+  left: 1rem;
+  bottom: 1rem;
+  position: absolute;
 }
 
 
@@ -552,10 +564,6 @@ footer {
 footer p {
   text-align: center;
 }
-
-
-
-
 
 
 
