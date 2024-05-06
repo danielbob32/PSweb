@@ -1,85 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parking Management System</title>
-    <link rel="stylesheet" href="styles.css?v=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="mediaqueries.css">
-
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>Parking Management System</h1>
-            <nav>
-                <ul>
-                    <li><a href="home-setup.html">Home Setup</a></li>
-                    <li><a href="data-recording.html">How to Record</a></li>
-                    <li><a href="training-system.html">Training the System</a></li>
-                    <li><a href="effective-regions.html">Effective Regions</a></li>
-                    <li><a href="contributing.html">Contributing</a></li>
-                    <li><a href="index2.html">Under Development</a></li>
-                </ul>
-            </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parking Space</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Parking Space</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#How-to-Setup-Locally">How to Setup Locally</a></li>
+          <li><a href="#Create-Data-Set">Create Data Set</a></li>
+          <li><a href="#Training-the-System">Training the System</a></li>
+          <li><a href="#Effective-Regions">Effective Regions</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Parking Space</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-    </header>
-
-    <section id="home" class="hero">
-        <div class="container">
-            <h2>Welcome to Parking Management System</h2>
-            <p>Here you can find more details about ParkingSpace.</p>
+        <div class="menu-links">
+          <li><a href="#How-to-Setup-Locally" onclick="toggleMenu()">How to Setup Locally</a></li>
+          <li><a href="#Create-Data-Set" onclick="toggleMenu()">Create Data Set</a></li>
+          <li><a href="#Training-the-System" onclick="toggleMenu()">Training the System</a></li>
+          <li><a href="#Effective-Regions" onclick="toggleMenu()">Effective Regions</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+        <div class="section-container">
+                <img src="Assets/index.gif" alt="Parking Space profile picture" class = "profile-pic">
+            </div>
+            <div class="section__text">
+                <p class="section__text__p1">Welcome To</p>
+                <h1 class="title">Parking Space</h1>
+                <p class="section__text__p2">Parking Space Detection System</p>
+                <div class="btn-container">
+                    <button class="btn btn-color-2" onclick="location.href='https://github.com/danielbob32/ParkingSpace'">GitHub Repository</button>
+                    <button class="btn btn-color-1" onclick="location.href='https://drive.google.com/drive/folders/1QcF1jjBGosJ222jYxhZ8896LLwEcX5bQ?usp=sharing'">Data Sets</button>
+                </div>
+                <div id="socials-container">
+                    <img src="Assets/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://www.linkedin.com/in/danielbobritski/'" />
+                    <img src="Assets/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/danielbob32'" />
+                </div>
+            </div>
         </div>
     </section>
-    <img src="Assets/index.gif" alt="Snapshots from Video" id="videoSnapshot">
-
-   
-
-    <section id="how-tos" class="how-tos">
-        <div class="container">
-            <h2>How To's</h2>
-            <a href="home-setup.html" class="how-to-card">
-                <i class="fas fa-home"></i>
-                <h3>Home Setup</h3>
-                <p>Here will be an in-depth guide on how to setup a home system.</p>
-            </a>
-            <a href="data-recording.html" class="how-to-card">
-                <i class="fas fa-video"></i>
-                <h3>How to Record the Data</h3>
-                <p>Here will be a quick guide on how to acquire your own data.</p>
-            </a>
+    <section id="How-to-Setup-Locally">
+      <p class="section__text__p1">Learn How To</p>
+      <h1 class="title">How to Setup Locally</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="Assets/localy.png"
+            alt="Profile picture"
+            class="How-to-Setup-Locally-pic"
+          />
         </div>
+        <div class="How-to-Setup-Locally-details-container">
+          <div class="How-to-Setup-Locally-containers">
+            <a href="setup-hardware.html" class="details-link">
+              <div class="details-container">
+                  <img src="Assets/microchip-icon.png" alt="microchip icon" class="icon" />
+                  <h2>Hardware</h2>
+                  <p>Learn how to setup the system</p>
+              </div>
+          </a>
+          <a href="home-setup.html" class="details-link">
+              <div class="details-container">
+                  <img src="Assets/software.png" alt="software icon" class="icon" />
+                  <h2>Software</h2>
+                  <p>Learn how to adjust the program for your area</p>
+              </div>
+          </a>
+          <div class="text-container">
+            <p>
+              In this section, you will learn how to setup the system locally. Starting from setting up the camera and the required network, to adjusting the program for your area.
+              Note that to reach the best results, you will also have to train the system with your own data set and learn how to choose the most effective regions.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="Assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#Create-Data-Set'"
+      />
     </section>
     
-    <section id="developers" class="developers">
-        <div class="container">
-            <h2>Developers</h2>
-            <a href="training-system.html" class="dev-card">
-                <i class="fas fa-database"></i>
-                <h3>Training the System</h3>
-                <p>Here will be a guide on how to train the system on your own data.</p>
-            </a>
-            <a href="effective-regions.html" class="dev-card">
-                <i class="fas fa-map"></i>
-                <h3>Effective Regions</h3>
-                <p>Here will be a guide to choosing the right regions.</p>
-            </a>
-            <a href="contributing.html" class="dev-card">
-                <i class="fas fa-code-branch"></i>
-                <h3>Contributing</h3>
-                <p>Walk-through for how you can start contributing now.</p>
-            </a>
+    <section id="Create-Data-Set">
+      <p class="section__text__p1">Learn How To</p>
+      <h1 class="title">To Create Your Own Data Set</h1>
+      <div class="section-container">
+        <div class="Create-Data-Set-details-container">
+          <a href="setup-hardware.html" class="details-link">
+            <div class="details-container">
+              <img src="Assets/microchip-icon.png" alt="microchip icon" class="icon" />
+              <h2>Our Data Set</h2>
+              <p>here you can find a link to the original data set</p>
+            </div>
+          </a>
+          <a href="home-setup.html" class="details-link">
+            <div class="details-container">
+              <img src="Assets/software.png" alt="software icon" class="icon" />
+              <h2>Make your own</h2>
+              <p>Here you can find a walkthrough on how to create your own data set</p>
+            </div>
+          </a>
         </div>
+        <img src="Assets/dataset.png" alt="Data Set Illustration" class="data-set-pic">
+        <div class="text-container">
+          <p>
+            In this section, you will learn how to create your own data set. You can start by exploring our original data sets or follow our detailed guide to create one tailored to your specific needs.
+          </p>
+        </div>
+      </div>
+      <img src="Assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#Training-the-System'"/>
     </section>
     
-
+ 
+    <section id="Effective-Regions">
+      <p class="section__text__p1">Find Out How To</p>
+      <h1 class="title">Choose Effective Regions</h1>
+      <div class="Effective-Regions-info-upper-container">
+        <div class="Effective-Regions-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon Effective-Regions-icon email-icon"
+          />
+          <p><a href="mailto:examplemail@gmail.com">Example@gmail.com</a></p>
+        </div>
+        <div class="Effective-Regions-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon Effective-Regions-icon"
+          />
+          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Parking Management System. All rights reserved.</p>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#How-to-Setup-Locally">How to Setup Locally</a></li>
+            <li><a href="#Create-Data-Set">Create Data Set</a></li>
+            <li><a href="#Training-the-System">Training the System</a></li>
+            <li><a href="#Effective-Regions">Effective Regions</a></li>
+          </ul>
         </div>
+      </nav>
+      <p>Copyright &#169; 2024 Parking Space. All Rights Reserved.</p>
     </footer>
-
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
