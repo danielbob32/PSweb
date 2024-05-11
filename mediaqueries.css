@@ -10,6 +10,7 @@
   #Training-the-System {
     height: fit-content;
   }
+  
 }
 @media screen and (max-width: 1200px) {
   #desktop-nav {
@@ -22,9 +23,7 @@
   .section-container {
     display: block;
   }
-  .arrow {
-    display: none;
-  }
+
   section,
   .section-container {
     height: fit-content;
@@ -120,22 +119,22 @@
     gap: 0.5rem;
     font-size: 0.7rem;
   }
-  
-  .dataset-container,.training-container,.regions-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
+  .details-container{
+   height: 70px;
   }
-  .training-container,.regions-container {
-    margin-top: 30px;
+  .dataset-container{
+    gap: 0px;
+    justify-content: center;
   }
   .dataset-btn{
     max-width: 160px;  
-    margin: 10px; 
+    height: 90px;
+    padding: 5px;
     margin-bottom: 50px; 
     text-align: center; 
+  }
+  .training-container,.regions-container {
+    margin-top: 30px;
   }
   .training-btn,.regions-btn {
     max-width: 200px;
@@ -144,10 +143,10 @@
     margin-bottom: 50px; 
     text-align: center; 
   }
-  .dataset-btn h2,.training-btn h2,.regions-btn h2{
+  .dataset-btn h2,.training-btn h2,.regions-btn h2,.details-container h2{
     font-size: 0.8rem;
   }
-  .dataset-btn p,.training-btn p,.regions-btn p{
+  .dataset-btn p,.training-btn p,.regions-btn p,.details-container p{
     font-size: 0.7rem;
   }
 
@@ -157,5 +156,12 @@
     left: 1rem;
     bottom: 1rem;
     position: absolute;
+  }
+  .arrow {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    width: 20px;
+    height: 20px;
   }
 }
