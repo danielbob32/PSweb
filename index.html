@@ -150,16 +150,47 @@
           <img src="Assets/probability_map.png" alt="Data Set Illustration" class="data-set-pic">
       </div>
     </div>
-    <p class="section__text__p1">Learn How To</p>
-    <div class="training-btn-container">
-        <button class="training-btn">View More</button>
-    </div>
+    <p class="section__text__p1">The 4 Steps of Training:</p>
+        <dl class="train-list">
+          <dt>1. Acquire the Data Set</dt>
+          <dd>Gather footage of your street.</dd>
+          <dt>2. Segmentation</dt>
+          <dd>Run the frames through segmentation model.</dd>
+          <dt>3. Masking</dt>
+          <dd>Create binary masks out of the segmented frames.</dd>
+          <dt>4. Probability Map</dt>
+          <dd>Generate a probability map from the masks.</dd>
+        </dl>
+
+        <div class="training-container">
+          <a href="data-recording.html" class="training-link">
+            <div class="training-btn">
+                <img src="Assets/gym.png" alt="train icon" class="train-icon" />
+                <h2>Click Here</h2>
+                <p>To follow the in-depth guide</p>
+            </div>
+        </a>
+            <img src="Assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#Effective-Regions'"/>
+            <a href="#top" class="back-to-top">Back to Top</a>
 </section>
 
 <section id="Effective-Regions">
   <p class="section__text__p1">Learn How To</p>
   <h1 class="title_4">Choose Effective Regions</h1>
-  <div class="create-dataset-container section-container">
+  <div class="regions-image">
+    <img src="Assets/Regions.gif" alt="Regions gif" class="regions-pic">
+</div>
+<p class="section__text__p1">Choosing the regions</p>
+<p class="regions_text">The right division into regions will determine the effectivness of your system.</p>
+<div class="regions-container">
+  <a href="data-recording.html" class="training-link">
+    <div class="regions-btn">
+        <img src="Assets/square.png" alt="regions icon" class="regions-icon" />
+        <h2>Learn more</h2>
+        <p>On how to choose the right regions</p>
+    </div>
+</a>
+<a href="#top" class="back-to-top">Back to Top</a>
 </section>
   
     <footer>
@@ -174,6 +205,7 @@
         </div>
       </nav>
       <p>Copyright &#169; 2024 Parking Space. All Rights Reserved.</p>
+      <a href="https://www.flaticon.com" title="icons">Credit to all icons to - Flaticon and the specific authors</a>
     </footer>
     <script src="script.js"></script>
   </body>

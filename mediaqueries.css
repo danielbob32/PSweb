@@ -87,6 +87,11 @@
       text-align: center;
     }
     
+    .profile-pic{
+      align-items: abosulute; 
+      width: 100px;
+      height: 100px;
+    }
 
     .section__pic-container {
       width: auto;
