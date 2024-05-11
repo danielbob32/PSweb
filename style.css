@@ -31,7 +31,7 @@ a,
 /* DESKTOP NAV */
 
 nav,
-.nav-links {
+.nav-links,.nav-links-footer {
   display: flex;
 }
 
@@ -41,7 +41,7 @@ nav {
   height: 17vh;
 }
 
-.nav-links {
+.nav-links,.nav-links-footer {
   gap: 2rem;
   list-style: none;
   font-size: 1.5rem;
@@ -79,59 +79,17 @@ a:hover {
   display: inline-block;
 }
 
-
-
-
-/* reset changes og hamnurger menu */
-.hamburger-menu {
-    width: auto; /* Adjust based on content */
-    padding: 10px; /* Adds padding inside the menu */
-}
-
-.menu-links a {
-    font-size: 1.2rem; /* Smaller font size for more text */
-    padding: 8px 12px; /* Adjust padding to give more space around the links */
-}
-
-.menu-links {
-    transition: max-height 0.3s ease-in-out; /* Smooth transition for expanding and collapsing */
-    max-height: 0; /* Start with collapsed menu */
-    overflow: hidden; /* Keeps extra content hidden */
-    width: 100%; /* Takes full width */
-    background-color: #fff; /* Ensures the menu is readable */
-}
-
-.hamburger-icon.open + .menu-links {
-    max-height: 500px; /* Adjust based on content size */
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column; /* Stacks links vertically on smaller screens */
-        align-items: center; /* Centers links */
-    }
-}
-
-
-/* reset changes og hamnurger menu */
-
-
-
-
-
-
-
 .hamburger-icon {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 24px;
+  height: 23px;
   width: 30px;
   cursor: pointer;
 }
 
 .hamburger-icon span {
-  width: 100%;
+  width: 70%;
   height: 2px;
   background-color: black;
   transition: all 0.3 ease-in-out;
@@ -141,7 +99,7 @@ a:hover {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: white;
+  background-color: transparent;
   width: fit-content;
   max-height: 0;
   overflow: hidden;
@@ -150,9 +108,9 @@ a:hover {
 
 .menu-links a {
   display: block;
-  padding: 10px;
+  padding: 5px;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 0.7rem;
   color: black;
   text-decoration: none;
   transition: all 0.3 ease-in-out;
@@ -467,11 +425,11 @@ section {
 }
 
 .dataset-btn{
-  width: 300px;
+  width: 500px;
   justify-content: space-evenly;
   align-items: center;
   padding: 5px;
-  background: rgb(216, 255, 232);
+  background: rgb(255, 254, 206);
   border-radius: 2rem;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.12);
   margin: 10px;
@@ -690,5 +648,18 @@ footer p {
   text-align: center;
 }
 
+.icon-cred{
+  display: flex;
+  font-size: 0.8rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 2rem;
+}
 
-
+.nav-links-footer{  
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.0rem;
+}
