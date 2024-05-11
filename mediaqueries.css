@@ -1,153 +1,165 @@
+/* General styles adjustment for better layout control */
 * {
   box-sizing: border-box;  /* Ensures padding and border are included in width/height */
 }
 
-/* General settings for devices with maximum width of 1400px */
+/* Enhancements for the hamburger menu for better visibility and interaction */
+#hamburger-nav {
+  display: block;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark with transparency for better visibility */
+  padding: 10px 0;
+  text-align: center; /* Center the items within the nav */
+  z-index: 1050; /* Ensures it's above other content */
+}
+
+.hamburger-icon {
+  cursor: pointer;
+  display: inline-block; /* Ensures that the icon lines up correctly */
+  padding: 15px; /* Larger area for easier interaction */
+}
+
+.hamburger-icon span {
+  display: block;
+  height: 3px;
+  width: 25px;
+  background-color: #fff;
+  margin: 5px auto; /* Centers the bars horizontally with spacing */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Arrow styling for better visibility and positioning */
+.arrow {
+  display: block;
+  position: fixed; /* or 'absolute' depending on layout needs */
+  bottom: 10%; /* Adjust as needed */
+  right: 5%; /* Adjust as needed */
+  z-index: 1040; /* Ensure it is visible above other content but below fixed elements */
+}
+
+/* Back to Top button adjustment to avoid overlap */
+.back-to-top {
+  position: fixed; /* Ensures it doesn't scroll with content */
+  right: 20px; /* Keeps it away from the right edge */
+  bottom: 20px; /* Keeps it away from the bottom edge */
+  padding: 10px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 5px;
+  z-index: 1040;
+  cursor: pointer;
+}
+
+/* Responsive Adjustments */
 @media screen and (max-width: 1400px) {
   #profile {
-    height: 83vh;  /* Adjusted for better visibility */
-    margin-bottom: 6rem;
+      height: 83vh;  /* Adjusted for better visibility */
+      margin-bottom: 6rem;
   }
   .How-to-Setup-Locally-containers,
   .Create-Data-Set-details-container,
   .Effective-Regions-info-upper-container {
-    flex-wrap: wrap;
+      flex-wrap: wrap;
   }
   #Effective-Regions,
-  #Training-the-System{
-    height: fit-content;  /* Ensures content does not overflow the section height */
+  #Training-the-System {
+      height: fit-content;  /* Ensures content does not overflow the section height */
   }
 }
 
-/* Settings for devices with maximum width of 1200px */
 @media screen and (max-width: 1200px) {
   #desktop-nav {
-    display: none;  /* Hide desktop navigation on smaller screens */
-  }
-  #hamburger-nav {
-    display: flex;  /* Show hamburger menu on smaller screens */
+      display: none;  /* Hide desktop navigation on smaller screens */
   }
   #Create-Data-Set,
   .Create-Data-Set-details-container {
-    margin-top: 2rem;
+      margin-top: 2rem;
   }
   #profile,
   .section-container {
-    display: block;  /* Stack elements vertically */
+      display: block;  /* Stack elements vertically */
   }
   .arrow {
-    display: none;  /* Hide arrows to prevent clutter */
+      display: none;  /* Hide arrows to prevent clutter */
   }
   section,
   .section-container {
-    height: fit-content;  /* Allow sections to expand as needed */
+      height: fit-content;  /* Allow sections to expand as needed */
   }
   section {
-    margin: 0 5%;  /* Add margin for better spacing */
+      margin: 0 5%;  /* Add margin for better spacing */
   }
   .section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 auto 2rem;  /* Center and space out image containers */
+      width: 275px;
+      height: 275px;
+      margin: 0 auto 2rem;  /* Center and space out image containers */
   }
   .How-to-Setup-Locally-containers {
-    margin-top: 0;
+      margin-top: 0;
   }
 }
 
-/* Specific settings for devices with maximum width of 600px */
 @media screen and (max-width: 600px) {
   #Effective-Regions,
   footer {
-    height: 40vh;  /* Adjust footer and sections to be less tall on small screens */
+      height: 40vh;  /* Adjust footer and sections to be less tall on small screens */
   }
   #profile {
-    height: 83vh;
-    margin-bottom: 0;
+      height: 83vh;
+      margin-bottom: 0;
   }
   article,
   .nav-links li a,
   .Effective-Regions-info-container p {
-    font-size: 1rem;  /* Reduce font size for readability on small screens */
+      font-size: 1rem;  /* Reduce font size for readability on small screens */
   }
   footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
+      height: fit-content;
+      margin-bottom: 2rem;
   }
   .How-to-Setup-Locally-containers,
   .Effective-Regions-info-upper-container,
   .btn-container {
-    flex-wrap: wrap;
+      flex-wrap: wrap;
   }
   .Effective-Regions-info-container {
-    margin: 0;
+      margin: 0;
   }
   .Create-Data-Set-sub-title {
-    font-size: 1.25rem;
+      font-size: 1.25rem;
   }
   .logo {
-    font-size: 1.5rem;  /* Reduce logo size on small screens */
+      font-size: 1.5rem;  /* Reduce logo size on small screens */
   }
   .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;  /* Center navigation links */
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;  /* Center navigation links */
   }
   .profile-pic {
-    align-items: absolute; 
-    width: 100px;
-    height: 100px;  /* Make profile pictures smaller */
-  }
-  .profile-pic {
-    width: 80vw;  /* Responsive width based on viewport width */
-    height: auto;  /* Maintain aspect ratio */
-    margin: 10px auto;  /* Centering horizontally */
+      width: 80vw;  /* Responsive width based on viewport width */
+      height: auto;  /* Maintain aspect ratio */
+      margin: 10px auto;  /* Centering horizontally */
   }
   .section__pic-container {
-    width: auto;
-    height: 46vw;  /* Adjust section container sizing */
-    justify-content: center;
+      width: auto;
+      height: 46vw;  /* Adjust section container sizing */
+      justify-content: center;
   }
   .section__text__p2 {
-    font-size: 1.25rem;
+      font-size: 1.25rem;
   }
   .title {
-    font-size: 2rem;  /* Adjust title size for better visibility */
+      font-size: 2rem;  /* Adjust title size for better visibility */
   }
   .text-container {
-    text-align: justify;  /* Justify text for better paragraph alignment */
+      text-align: justify;  /* Justify text for better paragraph alignment */
   }
-  .hamburger-menu {
-    z-index: 1000;  /* Higher z-index to ensure it's on top */
-    width: 100%;  /* Full width to cover the area properly */
-  }
-  .arrow,
-.btn {
-  display: block;  /* Ensure it's always visible and correctly positioned */
-  margin: 10px auto;  /* Center these elements horizontally */
-}
-.menu-links {
-  background-color: rgba(255, 255, 255, 0.95);  /* Slight transparency but mostly opaque for readability */
-  padding: 20px;  /* Adequate padding around links */
-  border-radius: 10px;  /* Rounded corners for a smoother look */
-}
 }
 
-/* Additional settings for very small screens and adjustments when orientation changes */
 @media screen and (max-width: 480px), (orientation: portrait) {
-  .logo,
-  .hamburger-icon {
-    display: inline-block;  /* Aligns logo and menu icon in one line */
-    vertical-align: middle;  /* Aligns them vertically to the middle */
-    font-size: 1.2rem;  /* Smaller font for the logo */
-    padding: 5px;  /* Reduced padding */
-    margin-right: 10px;  /* Space between menu icon and edge */
-  }
-  p, a, button {  /* Adjusts all text and buttons */
-    font-size: 14px;  /* Smaller font size for text */
-    line-height: 1.5;  /* Adequate line spacing for readability */
-  }
-
   #Create-Data-Set .create-dataset-image {
       width: 80%; /* Larger image on smaller screens for better visibility */
   }
@@ -160,6 +172,6 @@
 @media (orientation: portrait) {
   /* Ensure sections utilize available screen efficiently */
   section {
-    padding: 10px;  /* Reduces padding to fit smaller screens */
+      padding: 10px;  /* Reduces padding to fit smaller screens */
   }
 }
