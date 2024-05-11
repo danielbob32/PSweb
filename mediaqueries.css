@@ -59,8 +59,20 @@
   }
   #Training-the-System {
     height: 100vh;
+    margin-bottom: 10;
   }
-
+  #Effective-Regions {
+    height: 100vh;
+    margin-bottom: 10;
+  }
+  #Create-Data-Set {
+    height: 100vh;
+    margin-bottom: 10;
+  }
+  #How-to-Setup-Locally {
+    height: 100vh;
+    margin-bottom: 10;
+  }
   article {
     font-size: 1rem;
   }
@@ -135,7 +147,7 @@
   }
   .dataset-btn{
     width: 300px;  
-    height: 110px;
+    height: 100px;
     padding: 5px;
     margin-bottom: 50px;
     text-align: center; 
@@ -145,7 +157,7 @@
   }
   .training-btn,.regions-btn {
     max-width: 200px;
-    height: auto;  
+    height: 80px;  
     margin: 10px; 
     margin-bottom: 50px; 
     text-align: center; 
