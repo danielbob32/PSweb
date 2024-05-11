@@ -123,14 +123,16 @@
    height: 70px;
   }
   .dataset-container{
-    gap: 0px;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: none;
+
   }
   .dataset-btn{
-    max-width: 160px;  
+    max-width: 300px;  
     height: 90px;
     padding: 5px;
-    margin-bottom: 50px; 
+    margin-bottom: 50px;
     text-align: center; 
   }
   .training-container,.regions-container {
