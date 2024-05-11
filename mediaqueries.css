@@ -1,177 +1,51 @@
-/* General styles adjustment for better layout control */
-* {
-  box-sizing: border-box;  /* Ensures padding and border are included in width/height */
-}
+/* Apply mobile-specific styles only */
+@media screen and (max-width: 768px) {
+  #hamburger-nav {
+      background-color: transparent;  /* Clear any background */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px 20px;  /* Padding adjusted for touch area */
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;  /* Align items to the left */
+      z-index: 1050;  /* High z-index to stay on top */
+  }
 
-/* Enhancements for the hamburger menu for better visibility and interaction */
-#hamburger-nav {
-  display: block;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Dark with transparency for better visibility */
-  padding: 10px 0;
-  text-align: center; /* Center the items within the nav */
-  z-index: 1050; /* Ensures it's above other content */
-}
-
-.hamburger-icon {
-  cursor: pointer;
-  display: inline-block; /* Ensures that the icon lines up correctly */
-  padding: 15px; /* Larger area for easier interaction */
-}
-
-.hamburger-icon span {
-  display: block;
-  height: 3px;
-  width: 25px;
-  background-color: #fff;
-  margin: 5px auto; /* Centers the bars horizontally with spacing */
-  transition: all 0.3s ease-in-out;
-}
-
-/* Arrow styling for better visibility and positioning */
-.arrow {
-  display: block;
-  position: fixed; /* or 'absolute' depending on layout needs */
-  bottom: 10%; /* Adjust as needed */
-  right: 5%; /* Adjust as needed */
-  z-index: 1040; /* Ensure it is visible above other content but below fixed elements */
-}
-
-/* Back to Top button adjustment to avoid overlap */
-.back-to-top {
-  position: fixed; /* Ensures it doesn't scroll with content */
-  right: 20px; /* Keeps it away from the right edge */
-  bottom: 20px; /* Keeps it away from the bottom edge */
-  padding: 10px;
-  background-color: #fff;
-  color: #000;
-  border-radius: 5px;
-  z-index: 1040;
-  cursor: pointer;
-}
-
-/* Responsive Adjustments */
-@media screen and (max-width: 1400px) {
-  #profile {
-      height: 83vh;  /* Adjusted for better visibility */
-      margin-bottom: 6rem;
-  }
-  .How-to-Setup-Locally-containers,
-  .Create-Data-Set-details-container,
-  .Effective-Regions-info-upper-container {
-      flex-wrap: wrap;
-  }
-  #Effective-Regions,
-  #Training-the-System {
-      height: fit-content;  /* Ensures content does not overflow the section height */
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  #desktop-nav {
-      display: none;  /* Hide desktop navigation on smaller screens */
-  }
-  #Create-Data-Set,
-  .Create-Data-Set-details-container {
-      margin-top: 2rem;
-  }
-  #profile,
-  .section-container {
-      display: block;  /* Stack elements vertically */
-  }
-  .arrow {
-      display: none;  /* Hide arrows to prevent clutter */
-  }
-  section,
-  .section-container {
-      height: fit-content;  /* Allow sections to expand as needed */
-  }
-  section {
-      margin: 0 5%;  /* Add margin for better spacing */
-  }
-  .section__pic-container {
-      width: 275px;
-      height: 275px;
-      margin: 0 auto 2rem;  /* Center and space out image containers */
-  }
-  .How-to-Setup-Locally-containers {
-      margin-top: 0;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  #Effective-Regions,
-  footer {
-      height: 40vh;  /* Adjust footer and sections to be less tall on small screens */
-  }
-  #profile {
-      height: 83vh;
-      margin-bottom: 0;
-  }
-  article,
-  .nav-links li a,
-  .Effective-Regions-info-container p {
-      font-size: 1rem;  /* Reduce font size for readability on small screens */
-  }
-  footer nav {
-      height: fit-content;
-      margin-bottom: 2rem;
-  }
-  .How-to-Setup-Locally-containers,
-  .Effective-Regions-info-upper-container,
-  .btn-container {
-      flex-wrap: wrap;
-  }
-  .Effective-Regions-info-container {
-      margin: 0;
-  }
-  .Create-Data-Set-sub-title {
-      font-size: 1.25rem;
-  }
-  .logo {
-      font-size: 1.5rem;  /* Reduce logo size on small screens */
-  }
-  .nav-links {
+  .hamburger-icon {
+      cursor: pointer;
+      display: flex;
       flex-direction: column;
-      gap: 0.5rem;
-      text-align: center;  /* Center navigation links */
-  }
-  .profile-pic {
-      width: 80vw;  /* Responsive width based on viewport width */
-      height: auto;  /* Maintain aspect ratio */
-      margin: 10px auto;  /* Centering horizontally */
-  }
-  .section__pic-container {
-      width: auto;
-      height: 46vw;  /* Adjust section container sizing */
       justify-content: center;
+      align-items: center;
+      margin-left: 10px;  /* Space from the left edge of the viewport */
   }
-  .section__text__p2 {
-      font-size: 1.25rem;
-  }
-  .title {
-      font-size: 2rem;  /* Adjust title size for better visibility */
-  }
-  .text-container {
-      text-align: justify;  /* Justify text for better paragraph alignment */
-  }
-}
 
-@media screen and (max-width: 480px), (orientation: portrait) {
-  #Create-Data-Set .create-dataset-image {
-      width: 80%; /* Larger image on smaller screens for better visibility */
+  .hamburger-icon span {
+      display: block;
+      height: 3px;
+      width: 25px;
+      background-color: #fff;  /* White for visibility */
+      margin: 5px 0;
+      transition: all 0.3s ease-in-out;
   }
-  
-  #Create-Data-Set {
-      width: 90%; /* Slightly increase width on smaller screens */
-  }
-}
 
-@media (orientation: portrait) {
-  /* Ensure sections utilize available screen efficiently */
-  section {
-      padding: 10px;  /* Reduces padding to fit smaller screens */
+  /* Menu Links Styling for Mobile */
+  .menu-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+      transform: translateY(-100%);  /* Start hidden above */
+  }
+
+  .hamburger-icon.active + .menu-links {
+      display: block;
+      transform: translateY(0%);  /* Slide down when active */
   }
 }
